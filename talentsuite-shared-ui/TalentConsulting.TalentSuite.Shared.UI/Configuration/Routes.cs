@@ -31,8 +31,8 @@ namespace TalentConsulting.TalentSuite.Shared.UI.Configuration
 
         public static Dictionary<string, string> Recruit => new Dictionary<string,string>
         {
-            {"NotificationsManage", "/accounts/{0}/notifications-manage"},
-            {"RecruitHome", "/accounts/{0}"}
+            {"Home", "/home/{0}"},
+            {"Reports", "/reports/{0}"}
         };
         public static Dictionary<string, string> Finance => new Dictionary<string,string>
         {

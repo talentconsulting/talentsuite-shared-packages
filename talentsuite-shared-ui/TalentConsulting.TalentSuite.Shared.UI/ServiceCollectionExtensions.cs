@@ -6,26 +6,22 @@ namespace TalentConsulting.TalentSuite.Shared.UI
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddMaMenuConfiguration(this IServiceCollection services, string logoutRouteName, string identityClientId, string environment)
+        public static void AddMaMenuConfiguration(this IServiceCollection services, string logoutRouteName, string environment)
         {
-            ValidateArguments(logoutRouteName, identityClientId);
+            ValidateArguments(logoutRouteName);
             
             services.AddSingleton(new UrlBuilder(environment.ToLower()));
             
-            services.AddSingleton(new PageConfiguration(identityClientId, logoutRouteName));
+            services.AddSingleton(new PageConfiguration(logoutRouteName));
         }
 
-        private static void ValidateArguments(string logoutRouteName, string identityClientId)
+        private static void ValidateArguments(string logoutRouteName)
         {
             if (string.IsNullOrWhiteSpace(logoutRouteName))
             {
                 throw new ArgumentException("Needs a valid value", nameof(logoutRouteName));
             }
 
-            if (string.IsNullOrWhiteSpace(identityClientId))
-            {
-                throw new ArgumentException("Needs a valid value", nameof(identityClientId));
-            }
         }
     }
 }

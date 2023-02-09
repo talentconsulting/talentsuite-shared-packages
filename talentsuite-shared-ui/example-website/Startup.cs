@@ -17,13 +17,11 @@ namespace TalentConsulting.TalentSuite.Example.Web
     {
         public IConfiguration Configuration { get; }
         private readonly IWebHostEnvironment _hostingEnvironment;
-        private readonly string _oidcClient;
 
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
             _hostingEnvironment = env;
-            _oidcClient = Configuration["SFA.DAS.Employer.Shared.UI:MaPageConfiguration:AccountsOidcClientId"];
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -44,9 +42,9 @@ namespace TalentConsulting.TalentSuite.Example.Web
                 options.EnableEndpointRouting = false;
             });
 
-            services.AddMaMenuConfiguration(RouteNames.Logout_Get, _oidcClient, "at");
+            services.AddMaMenuConfiguration(RouteNames.Logout_Get, "at");
 
-            services.AddAuthenticationService("employer-test-site");
+           services.AddAuthenticationService("employer-test-site");
             //services.AddAuthorizationService();
         }
 

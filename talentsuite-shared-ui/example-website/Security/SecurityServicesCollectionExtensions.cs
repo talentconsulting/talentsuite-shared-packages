@@ -39,7 +39,7 @@ namespace TalentConsulting.TalentSuite.Example.Web.Security
                         return Task.CompletedTask;
                     };
                 });
-            
+
             services.AddAuthentication(authenticationCookieName).AddCookie(options =>
             {
                 options.AccessDeniedPath = new PathString("/error/403");
@@ -51,7 +51,7 @@ namespace TalentConsulting.TalentSuite.Example.Web.Security
                 options.CookieManager = new ChunkingCookieManager { ChunkSize = 3000 };
                 options.LogoutPath = "/home/signed-out";
             });
-            
+
         }
     }
     internal class EmployerStubAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>

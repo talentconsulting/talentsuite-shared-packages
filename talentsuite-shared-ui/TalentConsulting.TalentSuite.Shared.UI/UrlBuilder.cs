@@ -76,7 +76,7 @@ namespace TalentConsulting.TalentSuite.Shared.UI
             switch (section)
             {
                 case NavigationSection.TalentSuiteHome:
-                    return RecruitLink("Reports", args);
+                    return RecruitLink("Home", args);
                 case NavigationSection.TalentSuiteReports:
                     return CommitmentsV2Link("Reports", args);
                 case NavigationSection.TalentSuiteTimesheets:

@@ -20,8 +20,7 @@ namespace TalentConsulting.TalentSuite.Example.Web.Controllers
             _logger = logger;
         }
 
-        [Route("{employerAccountId}")]
-        public IActionResult Index(string employerAccountId)
+        public IActionResult Index()
         {
             return View();
         }
