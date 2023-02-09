@@ -3,7 +3,6 @@ using System.IO;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using SFA.DAS.Configuration.AzureTableStorage;
 
 namespace TalentConsulting.TalentSuite.Example.Web
 {
