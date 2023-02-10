@@ -14,4 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TalentConsulting.TalentSuite.Shared.UI\TalentConsulting.TalentSuite.Shared.UI.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
 </Project>
