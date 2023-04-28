@@ -28,18 +28,18 @@ app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapHealthChecks("/health", new HealthCheckOptions()
+    endpoints.MapHealthChecks("/info", new HealthCheckOptions()
     {
         ResponseWriter = HealthCheckExtensions.WriteResponse
     });
 
-    endpoints.MapHealthChecks("/health/info", new HealthCheckOptions()
+    endpoints.MapHealthChecks("/info/details", new HealthCheckOptions()
     {
         Predicate = p => p.Tags.Any(t => t == "Info"),
         ResponseWriter = HealthCheckExtensions.WriteResponse
     });
 
-    endpoints.MapHealthChecks("/health/readiness", new HealthCheckOptions()
+    endpoints.MapHealthChecks("/info/readiness", new HealthCheckOptions()
     {
         Predicate = p => p.Tags.Any(t => t == "Readiness"),
         ResponseWriter = HealthCheckExtensions.WriteResponse
