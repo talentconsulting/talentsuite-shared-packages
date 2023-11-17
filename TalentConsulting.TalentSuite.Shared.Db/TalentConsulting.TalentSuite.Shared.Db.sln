@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentConsulting.TalentSuite.Shared.Db", "TalentConsulting.TalentSuite.Shared.Db\TalentConsulting.TalentSuite.Shared.Db.csproj", "{BE3737DF-360B-4320-8051-F52B8710A89F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalentConsulting.TalentSuite.Shared.Common", "TalentConsulting.TalentSuite.Shared.Common\TalentConsulting.TalentSuite.Shared.Common.csproj", "{59B59F99-91E0-41B6-BD0E-C0BE0FDA49D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE3737DF-360B-4320-8051-F52B8710A89F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3737DF-360B-4320-8051-F52B8710A89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3737DF-360B-4320-8051-F52B8710A89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3737DF-360B-4320-8051-F52B8710A89F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B59F99-91E0-41B6-BD0E-C0BE0FDA49D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B59F99-91E0-41B6-BD0E-C0BE0FDA49D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B59F99-91E0-41B6-BD0E-C0BE0FDA49D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B59F99-91E0-41B6-BD0E-C0BE0FDA49D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8C1ADAD-60D0-46B8-9222-2D882BEFAE90}
+	EndGlobalSection
+EndGlobal
