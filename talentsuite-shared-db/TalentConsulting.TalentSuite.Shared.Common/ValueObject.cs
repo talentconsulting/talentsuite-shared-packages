@@ -23,19 +23,17 @@ public abstract class ValueObject : ValueObjectBase, IComparable, IComparable<Va
 
     public override int GetHashCode()
     {
-        if (!_cachedHashCode.HasValue)
-        {
-            _cachedHashCode = GetEqualityComponents()
-                .Aggregate(1, (current, obj) =>
+        // Compute the hash code without using the mutable field
+        int hashCode = GetEqualityComponents()
+            .Aggregate(1, (current, obj) =>
+            {
+                unchecked
                 {
-                    unchecked
-                    {
-                        return current * 23 + (obj?.GetHashCode() ?? 0);
-                    }
-                });
-        }
+                    return current * 23 + (obj?.GetHashCode() ?? 0);
+                }
+            });
 
-        return _cachedHashCode.Value;
+        return hashCode;
     }
 
     public int CompareTo(ValueObject? other)
