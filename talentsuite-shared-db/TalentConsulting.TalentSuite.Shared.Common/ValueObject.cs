@@ -6,8 +6,6 @@
 [Serializable]
 public abstract class ValueObject : ValueObjectBase, IComparable, IComparable<ValueObject>
 {
-    private int? _cachedHashCode;
-
     public override bool Equals(object? obj)
     {
         if (obj == null)
